@@ -9,7 +9,7 @@ pipeline {
         }
         stage('TokenTest') { 
             steps {
-                sh 'sudo lsof -i:8086'
+                sh 'curl -X POST  http://127.0.0.1:8000/login -d '{"username": "admin","password": "admin"}''
 
             }
         }
