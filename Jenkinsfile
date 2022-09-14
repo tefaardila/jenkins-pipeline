@@ -3,12 +3,13 @@ pipeline {
     stages {
         stage('PortTest') { 
             steps {
-                sh 'sudo lsof -i:8000'
+                echo 'Making the 8200 port Test'
+                
             }
         }
         stage('TokenTest') { 
             steps {
-                echo 'Making the 8200 port Test'
+                sh 'sudo lsof -i:8000'
 
             }
         }
