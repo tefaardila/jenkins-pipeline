@@ -9,7 +9,7 @@ pipeline {
         }
         stage('TokenTest') { 
             steps {
-                sh 'curl -X POST  http://127.0.0.1:8000/login -d '{"username": "admin","password": "admin"}''
+                sh 'curl -X POST  http://127.0.0.1:8000/login -d \'{"username": "admin","password": "admin"}\''
 
             }
         }
