@@ -1,19 +1,14 @@
 pipeline {
     agent any 
     stages {
-        stage('Build') { 
+        stage('PortTest') { 
             steps {
-                // 
+                echo "Making the 8283 port Test"
             }
         }
-        stage('Test') { 
+        stage('TokenTest') { 
             steps {
-                // 
-            }
-        }
-        stage('Deploy') { 
-            steps {
-                // 
+                echo "Making the Get Token Test"
             }
         }
     }
