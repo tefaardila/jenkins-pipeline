@@ -3,12 +3,14 @@ pipeline {
     stages {
         stage('PortTest') { 
             steps {
-                echo "Making the 8283 port Test"
+                echo 'Making the 8283 port Test'
+                sh 'sudo lsof -i:8083'
             }
         }
         stage('TokenTest') { 
             steps {
-                echo "Making the Get Token Test"
+                sh 'sudo lsof -i:8086'
+
             }
         }
     }
